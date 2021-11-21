@@ -1,0 +1,5 @@
+#pragma once
+
+#ifndef GLFW_WRAPPER_NAMESPACE
+#  define GLFW_WRAPPER_NAMESPACE glfw
+# endif // GLFW_WRAPPER_NAMESPACE

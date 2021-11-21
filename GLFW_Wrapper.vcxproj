@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{B2E6FFAB-2E23-46CF-A4F9-6FE31D19BB9E}</ProjectGuid>
+    <RootNamespace>GagGLFW</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Context.h" />
+    <ClInclude Include="include\ContextAttributes.h" />
+    <ClInclude Include="include\ContextHints.h" />
+    <ClInclude Include="include\Cursor.h" />
+    <ClInclude Include="include\Defines.h" />
+    <ClInclude Include="include\Enums.h" />
+    <ClInclude Include="include\Event.h" />
+    <ClInclude Include="include\EventHandler.h" />
+    <ClInclude Include="include\EventHandlerManager.h" />
+    <ClInclude Include="include\EventType.h" />
+    <ClInclude Include="include\FramebufferHints.h" />
+    <ClInclude Include="include\GamepadState.h" />
+    <ClInclude Include="include\GammaRamp.h" />
+    <ClInclude Include="include\GLFW_Wrapper.h" />
+    <ClInclude Include="include\Image.h" />
+    <ClInclude Include="include\InitHints.h" />
+    <ClInclude Include="include\Input.h" />
+    <ClInclude Include="include\Joystick.h" />
+    <ClInclude Include="include\KeyModifier.h" />
+    <ClInclude Include="include\MacHints.h" />
+    <ClInclude Include="include\Monitor.h" />
+    <ClInclude Include="include\MonitorHints.h" />
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="include\VideoMode.h" />
+    <ClInclude Include="include\Vulkan.h" />
+    <ClInclude Include="include\Window.h" />
+    <ClInclude Include="include\WindowAttributes.h" />
+    <ClInclude Include="include\WindowHints.h" />
+    <ClInclude Include="include\WindowInputApi.h" />
+    <ClInclude Include="include\X11Hints.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Context.cpp" />
+    <ClCompile Include="src\ContextAttributes.cpp" />
+    <ClCompile Include="src\ContextHints.cpp" />
+    <ClCompile Include="src\Cursor.cpp" />
+    <ClCompile Include="src\FramebufferHints.cpp" />
+    <ClCompile Include="src\GamepadState.cpp" />
+    <ClCompile Include="src\GammaRamp.cpp" />
+    <ClCompile Include="src\GLFW_Wrapper.cpp" />
+    <ClCompile Include="src\Image.cpp" />
+    <ClCompile Include="src\InitHints.cpp" />
+    <ClCompile Include="src\Input.cpp" />
+    <ClCompile Include="src\Joystick.cpp" />
+    <ClCompile Include="src\MacHints.cpp" />
+    <ClCompile Include="src\Monitor.cpp" />
+    <ClCompile Include="src\MonitorHints.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\VideoMode.cpp" />
+    <ClCompile Include="src\Vulkan.cpp" />
+    <ClCompile Include="src\Window.cpp" />
+    <ClCompile Include="src\WindowAttributes.cpp" />
+    <ClCompile Include="src\WindowHints.cpp" />
+    <ClCompile Include="src\WindowInputApi.cpp" />
+    <ClCompile Include="src\X11Hints.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

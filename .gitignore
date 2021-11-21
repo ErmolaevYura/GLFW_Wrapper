@@ -1,0 +1,7 @@
+.idea
+.vs
+.vscode
+*.user
+Win32
+x64
+out
